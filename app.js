@@ -14,8 +14,9 @@ form.addEventListener('submit', (e) =>{
   e.preventDefault();
   const text = input.value;
   input.value = '';
-
-  const li = createLI(text);
-  ul.appendChild(li);
-
+  
+  if (text.length > 0){
+    const li = createLI(text);
+    ul.appendChild(li);
+  }
 });
